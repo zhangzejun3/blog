@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+  </script>
+</head>
+<body>
+  <ul>
+    <li id="item1">选项1</li>
+    <li id="item2">选项2</li>
+    <li id="item3">选项3</li>
+    <li id="item4">选项4</li>
+    <li id="item5">选项5</li>
+  </ul>
+  <script>
+    console.log(typeof jQuery)
+
+    Node.prototype.getSibling = function (){
+      var allChildren = this.parentNode.children
+      var array = {length:0}
+      for(let i = 0;i < allChildren.length;i++){
+        if(allChildren[i] !== this){
+          array[array.length] = allChildren[i]
+          array.length++
+        }
+      }
+      return array
+    }
+    console.log(item2.getSibling())
+
+    // function getSibling(node){
+    //   var allChildren = node.parentNode.children
+    //   var array = {length:0}
+    //   for(let i = 0;i < allChildren.length;i++){
+    //     if(allChildren[i] !== node){
+    //       array[array.length] = allChildren[i]
+    //       array.length++
+    //     }
+    //   }
+    //   return array
+    // }
+    // console.log(getSibling(item5))
+
+
+    // var classes = ['a','b','c']
+    // classes.forEach((value)=> item3.classList.add(value))
+    // function addClass(node,classes){
+    //   for(let key in classes){
+    //     var value = classes[key]
+    //     if(value){
+    //       node.classList.add(key)
+    //     }else{
+    //       node.classList.remove(key)
+    //     }
+    //   }
+    // }
+    // addClass(item1,{'f':true,'e':false})
+
+    // var classes = {'a':true,'b':false,'c':true}
+    // for(let key in classes){
+    //   var value = classes[key]
+    //   if(value){
+    //     item3.classList.add(key)
+    //   }else{
+    //     item3.classList.remove(key)
+    //   }
+    // }
+    // function addClass(node,classes){
+    //   for(let key in classes){
+    //     var value = classes[key]
+    //     var methodName = value ? 'add' : 'remove'
+    //     node.classList[methodName](key)
+    //     // console.log(methodName)
+    //     // console.log(node.classList)
+    //     // console.log(node.classList.add)
+    //     // console.log(node.classList[methodName])
+    //   }
+    // }
+    // addClass(item5,{'e':true,'f':true})
+
+    Node.prototype.addClass = function(classes){
+      for(let key in classes){
+        var value = classes[key]
+        var methodName = value ? 'add' : 'remove'
+        this.classList[methodName](key)
+      }
+    }
+    item1.addClass({'g':true,'h':true})
+
+  </script>
+</body>
+</html>
