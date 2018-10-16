@@ -13,13 +13,13 @@ body{
   vertical-align: top;
 }
 .window{
-  width: 960px;
-  margin: 0 auto;
+  width: 600px;
+  margin: 120px auto 20px;
   overflow: hidden;
 }
 .red{
   color: red;
 }
 #buttons{
-  font-size: 2em;
+  font-size: 1.6em;
 }

@@ -2,7 +2,7 @@ var allButtons = $('#buttons > span')
 for (let i = 0; i < allButtons.length; i++) {
   $(allButtons[i]).on('click', function(x) {
     var index = $(x.currentTarget).index()
-    var p = index * -960
+    var p = index * -600
     $('#images').css({
       transform: 'translate(' + p + 'px)'
     })
