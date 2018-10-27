@@ -9,7 +9,37 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-  
-  <script></script>
+    <div class="window">
+        <div id="images" class="images">
+            <img class='png1' src="./img/1.jpeg" alt="">
+            <img class='png2' src="./img/2.jpeg" alt="">
+            <img class='png3' src="./img/3.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        setTimeout(function(){
+            $('#images > .png1').css({transform:'translateX(-100%)'});
+            $('#images > .png2').css({transform:'translateX(-100%)'});
+            $('#images > .png1').one('transitionend',function(e){
+                $(e.currentTarget).addClass('right').css({transform:'none'})
+            })
+        },3000)
+    
+        setTimeout(function(){
+            $('#images > .png2').css({transform:'translateX(-200%)'});
+            $('#images > .png3').css({transform:'translateX(-100%)'});
+            $('#images > .png2').one('transitionend',function(e){
+                $(e.currentTarget).addClass('right').css({transform:'none'})
+            })
+        },6000)
+        
+        setTimeout(function(){
+            $('#images > .png3').css({transform:'translateX(-200%)'});
+            $('#images > .png1').css({transform:'translateX(-100%)'});
+            $('#images > .png3').one('transitionend',function(e){
+                $(e.currentTarget).addClass('right').css({transform:'none'})
+            })
+        },9000)
+    </script>
 </body>
 </html>
