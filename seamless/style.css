@@ -1,38 +1,14 @@
 *{
-  margin:0;
-  padding:0
-  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 .window{
-  height:300px;
-  width:400px;
-  margin:20px auto;
-  overflow:hidden;
-}
-.images > img{
-  transition: all 0.3s
+  width: 400px;
+  height: 300px;
+  margin: 20px auto;
+  overflow: hidden;
 }
 .images{
-  position:relative;
-}
-.images > .png1{
-  position:absolute;
-  left:0;
-  top:0;
-}
-.images > .png2{
-  position:absolute;
-  left:100%;
-  top:0;
-}
-.images > .png3{
-  position:absolute;
-  left:100%;
-  top:0;
-}
-.images > img.right{
-  position:absolute;
-  top:0;
-  left:100%;
+  display: flex;
 }
